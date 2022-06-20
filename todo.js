@@ -40,7 +40,38 @@ const populateTodos = () => {
     }
 }
 
+function clearTodos() {
 
+    const todos = document.getElementsByTagName("OL");
+
+    for (i=0; i < todos.length; i++) {
+
+        console.log(todos[i].id);
+
+        todos[i].innerHTML = null;
+    }
+}
+
+function filterById() {
+    
+    let toDos = document.getElementById("todo-list")
+
+    const num = document.getElementById("number_input").value
+    
+    const filteredArray = arrayOfTodos.filter(array => array.userId == num)
+
+    for (i = 0; i < filteredArray.length; i++) {
+
+    
+        let toDosList = document.createElement("LI")
+
+        let toDoTextNode = document.createTextNode(filteredArray[i].title)
+
+        toDosList.appendChild(toDoTextNode)
+
+        toDos.appendChild(toDosList)
+    }
+}
 
 // After you've been able to access and console the properties on any object in the array your next step is to insert that data into an li element and insert the li into the ol.
 

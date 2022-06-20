@@ -12,8 +12,19 @@
     <button onclick="fetchTodos()">Fetch Todos</button>
     <button onclick="logTodos()">Log Todos</button>
     <button onclick="populateTodos()">Populate Todos</button>
+    <!-- <button onclick="clearTodos()">Clear Todos</button> -->
+
+    <form> 
+
+        <label for="number_input">Enter a number between 1 and 10</label>
+        <input type="number" id="number_input" min="1" max="10">
+
+        <button onclick="filterById()" type ="button" name="button1">Todo by User</button>
+        <button onclick="clearTodos()" type="button">Clear Todos</button>
+    </form>
     
-    
+
+
     <ol id="todo-list">
     <!-- LIs will go here -->
     </ol>
